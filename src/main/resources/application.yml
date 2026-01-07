@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: consumer-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mukesh958/cloud-config-server
+    
+server:
+  port: 9196
+eureka:
+    client:
+      register-with-eureka: true
+      fetch-registry: true 
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      host-name: localhost  
